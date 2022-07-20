@@ -1,4 +1,4 @@
-**/libcarla-install/
-**/eigen-3.3.7/
-**/.vscode
-**/rpclib/
+project/starter_files/libcarla-install/
+project/starter_files/eigen-3.3.7/
+project/starter_files/.vscode
+project/starter_files/rpclib/
