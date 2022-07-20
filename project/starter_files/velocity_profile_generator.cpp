@@ -362,7 +362,14 @@ double VelocityProfileGenerator::calc_distance(const double& v_i,
     // v_i (initial velocity) to v_f (final velocity) at a constant
     // acceleration/deceleration "a". HINT look at the description of this
     // function. Make sure you handle div by 0
-    d = std::abs(pow(v_f, 2) - pow(v_i, 2))/(2*a);;  // <- Update
+    if (a == 0.0)
+    {
+      d = std::numeric_limits<double>::infinity();
+    }
+    else
+    {
+      d = std::abs(pow(v_f, 2) - pow(v_i, 2))/(2*a);  // <- Update
+    }
   }
   return d;
 }
